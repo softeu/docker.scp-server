@@ -3,7 +3,7 @@ FROM softeu/ubuntu-base
 MAINTAINER Jindrich Vimr <jvimr@softeu.com>
 
 RUN apt-get install -y openssh-server rssh
-RUN useradd -m   data
+RUN useradd -m -s /usr/bin/rssh  data
 
 ADD run-ssh.sh /
 
